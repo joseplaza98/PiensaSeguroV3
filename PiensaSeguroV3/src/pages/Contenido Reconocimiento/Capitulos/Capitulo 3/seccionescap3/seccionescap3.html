@@ -1,0 +1,246 @@
+<!--
+  Generated template for the Seccionescap3Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>seccionescap3</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="intro">
+        Intro
+      </ion-segment-button>
+      <ion-segment-button value="objetivo" (click)="visitTopic(3,5)" [disabled]="!srv.validateTopic(ch3, 4)">
+        Objetivo
+      </ion-segment-button>
+      <ion-segment-button value="metodo" (click)="visitTopic(3,6)" [disabled]="!srv.validateTopic(ch3, 5)">
+        Métodos
+      </ion-segment-button>
+      <ion-segment-button value="dinamica" (click)="visitTopic(3,13)" [disabled]="!srv.validateTopic(ch3, 12)">
+        Dinámica
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'intro'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/VeHE2U-Fbd8" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Analista de Sistemas
+                  </ion-card-title>
+                  <p style="text-align: justify"> Es el encargado del desarrollo de aplicaciones en lo que respecta a
+                    su
+                    diseño y obtención de los algoritmos, etc.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/DPEUkkN65w4" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    ¿Cual es la importancia de los analistas de sistemas?
+                  </ion-card-title>
+
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary"
+                      (click)="extencionTema1(3,1)">Ver</button>
+                  </ion-list>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'objetivo'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <!-- Foto de fondo creado por jcomp - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../assets/imgs/2LocalizarObjetivo.jpg" />
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Objetivos
+                  </ion-card-title>
+                  <p style="text-align: justify"> Un Analista de Sistemas Informáticos debe tener en cuenta que cada
+                    uno
+                    de sus procesos tendra una interpretacion dentro del sisitema que está auditando debido a que
+                    generará
+                    un analisis del estado en relación con la seguridad en pro de salvaguardar la integridad del
+                    sistema
+                    informático.
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'metodo'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <!--Foto de madera creado por freepik - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../assets/imgs/1Metodos.jpg" />
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Métodos
+                  </ion-card-title>
+                  <p style="text-align: justify"> Existen diversas metodologías y herramientas para auditar sistemas de
+                    información,
+                    elige una opción y empieza a verlas en detalle.</p>
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary" (click)="aNmap(3,7)"
+                      [disabled]="!srv.validateTopic(ch3, 6)">Comandos Nmap </button>
+                    <button ion-button block outline round icon-end color="primary" (click)="aNetCat(3,10)"
+                      [disabled]="!srv.validateTopic(ch3, 9)">Comandos NetCat </button>
+                  </ion-list>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'dinamica'">
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-card>
+              <ion-card-content>
+                <h1 style="text-align: center; font-weight: bold">Comprueba tu aprendizaje a partir de estos cortos
+                  test</h1>
+                <br />
+                <p style="text-align: justify">¿Aprendiste lo necesario sobre esta sección?, entonces realiza estos
+                  test
+                  y corroborra tu aprendizaje.</p>
+                <br />
+                <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../../../assets/imgs/Actividades 1/Actividad 2.jpg">
+              </ion-card-content>
+
+              <br />
+
+              <ion-card-content>
+                <h1 style="text-align: center;font-weight: bold">Instrucciones</h1>
+                <p style="text-align: center;font-weight: bold">Desliza el nivel que deseas realizar hacia la izquierda
+                  y
+                  empieza tus test.
+                </p>
+              </ion-card-content>
+
+              <ion-card-content>
+
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+                      <ion-avatar item-start>
+                        <img src="../../../../../../../assets/imgs/Dinamica.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right">
+                      <button ion-button class="slide2" (click)="aDinamica1(3,14)"
+                        [disabled]="!srv.validateTopic(ch3, 13)">
+                        <H3>Concepto 1-a</H3>
+                      </button>
+                      <button ion-button class="slide1"(click)="aDinamica2(3,15)"
+                        [disabled]="!srv.validateTopic(ch3, 14)">
+                        <H3>concepto 1-b</H3>
+                      </button>
+                    </ion-item-options>
+                  </ion-item-sliding>
+                </ion-list>
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+                      <ion-avatar item-start>
+                        <img src="../../../../../../../assets/imgs/Evaluacion1.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right">
+                      <button ion-button class="slideE" (click)="aEvaluacion(3,16)"
+                        [disabled]="!srv.validateTopic(ch3, 15)">
+                        <H3>Evaluación</H3>
+                      </button>
+                    </ion-item-options>
+
+                  </ion-item-sliding>
+                </ion-list>
+
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </div>
+
+  <ion-fab left bottom>
+    <button ion-fab color="secundary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <ion-fab-list side="right">
+      <button ion-fab color="#ffffff" (click)="aHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aManual()">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aChatInteractivo3()">
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

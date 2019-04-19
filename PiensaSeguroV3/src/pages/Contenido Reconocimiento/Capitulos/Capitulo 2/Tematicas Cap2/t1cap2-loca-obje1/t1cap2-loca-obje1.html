@@ -1,0 +1,84 @@
+<!--
+  Generated template for the T1cap2LocaObje1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>t1cap2LocaObje1</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="basedatos">
+        Base Datos
+      </ion-segment-button>
+      <ion-segment-button value="consultas" (click)="visitTopic(2,5)" [disabled]="!srv.validateTopic(ch2, 4)">
+        Consultas
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+
+  <div [ngSwitch]="intro">
+
+    <ion-list *ngSwitchCase="'basedatos'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Base de datos WHOIS
+                  </ion-card-title>
+                  <p style="text-align: justify"> - El servicio de WHOIS es un directorio gratuito y de acceso público que
+                    contiene información técnica y de contacto de los titulares de nombres de dominio registrados (los “registratarios”).</p>
+                  <br/>
+                  <img src="../../../../../../assets/imgs/whois.gif" />
+                  <br/>
+                  <p style="text-align: justify"> - Toda persona que desee saber quién está detrás del nombre de dominio
+                    de un sitio web puede solicitar esa información mediante WHOIS.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'consultas'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Consultas DNS inversas
+                  </ion-card-title>
+                  <p style="text-align: justify"> - Las consultas directas son necesarias para el correcto funcionamiento
+                    de internet ya que sin ellas no sería posible poner en el navegador una dirección web y obtener la página.
+                  </p>
+                  <br/>
+                  <img src="../../../../../../assets/imgs/consultainversa.gif" />
+                  <br/>
+                  <p style="text-align: justify"> - Las consultas inversas no son necesarias pero si son muy peligrosas ya
+                    que si un atacante conoce todos los dominios que tiene su servidor es lógico que intente entrar por el
+                    dominio más vulnerable.
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

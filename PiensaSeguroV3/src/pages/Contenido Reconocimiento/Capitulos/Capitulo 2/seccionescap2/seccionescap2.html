@@ -1,0 +1,299 @@
+<!--
+  Generated template for the Seccionescap2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>seccionescap2</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="vector">
+        Vector
+      </ion-segment-button>
+      <ion-segment-button value="objetivo" (click)="visitTopic(2,3)" [disabled]="!srv.validateTopic(ch2, 2)">
+        Objetivo
+      </ion-segment-button>
+      <ion-segment-button value="analisis" (click)="visitTopic(2,7)" [disabled]="!srv.validateTopic(ch2, 6)">
+        Análisis
+      </ion-segment-button>
+      <ion-segment-button value="dinamica" (click)="visitTopic(2,10)" [disabled]="!srv.validateTopic(ch2, 9)">
+        Dinámica
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'vector'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/5eWBdcZ9l7g" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold">
+                    Buscar vector de ataque
+                  </ion-card-title>
+                  <p style="text-align: justify"> Un vector de ataque no es más que la ruta o camino que utiliza un
+                    atacante
+                    para tener acceso al activo objetivo de ataque.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/UW2S6sEg1sA" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold">
+                    ¿Para qué sirve la búsqueda de un vector de ataque?
+                  </ion-card-title>
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+                      (click)="extencionTema1(2,1)">Ver</button>
+                  </ion-list>
+                </ion-card-content>
+
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'objetivo'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <!-- Foto de negocios creado por rawpixel.com - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../assets/imgs/1LocalizarObjetivo.jpg" />
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Localizar objetivo
+                  </ion-card-title>
+                  <p style="text-align: justify"> Se usa principalmente para Buscar al objetivo en pro de determinar el
+                    tipo
+                    de interés.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <!-- Foto de negocios creado por rawpixel.com - www.freepik.es -->
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/OYRrvcL0oAw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    ¿Porque localizar el objetivo antes de atacarlo?
+                  </ion-card-title>
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+                      (click)="extencionTema2(2,4)" [disabled]="!srv.validateTopic(ch2, 3)">Barridos y
+                      trazados</button>
+                    <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+                      (click)="extencionTema3(2,6)" [disabled]="!srv.validateTopic(ch2,5)">Bases de datos</button>
+                  </ion-list>
+                </ion-card-content>
+
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'analisis'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <!-- Foto de fondo creado por ijeab - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../assets/imgs/2AnalizarObjetivo.jpg" />
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Analizar Objetivo
+                  </ion-card-title>
+                  <p style="text-align: justify"> Los objetivos que se persiguen con la exploración de puertos van
+                    ligados
+                    a la determinacion del tipo de Sistema Operativo (SO) y los tipos de servicios que se consumen.</p>
+                  <ion-list style="text-align: center">
+
+                    <button ion-button block outline round icon-end color="primary" (click)="pop1(2,8)"
+                      [disabled]="!srv.validateTopic(ch2, 7)">Identificar servicios</button>
+                    <button ion-button block outline round icon-end color="primary" (click)="pop2(2,9)"
+                      [disabled]="!srv.validateTopic(ch2, 8)">Identificar sistema
+                      operativo</button>
+
+                  </ion-list>
+                </ion-card-content>
+
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+
+
+    <ion-list *ngSwitchCase="'dinamica'">
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-card>
+              <ion-card-content>
+                <h1 style="text-align: center; font-weight: bold">Comprueba tu aprendizaje a partir de estos cortos
+                  test</h1>
+                <br />
+                <p style="text-align: justify">¿Aprendiste lo necesario sobre esta sección?, entonces realiza estos
+                  test
+                  y corroborra tu aprendizaje.</p>
+                <br />
+                <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
+                <img
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../../../assets/imgs/Actividades 1/Actividad 2.jpg">
+              </ion-card-content>
+
+              <br />
+
+              <ion-card-content>
+                <h1 style="text-align: center;font-weight: bold">Instrucciones</h1>
+                <p style="text-align: center;font-weight: bold">Desliza el nivel que deseas realizar hacia la izquierda
+                  y
+                  empieza tus test.
+                </p>
+              </ion-card-content>
+
+              <ion-card-content>
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+
+                      <ion-avatar item-start>
+                        <img src="../../../../../../../assets/imgs/Dinamica.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right" >
+                      <button ion-button class="slide2" (click)="aDinamica1(2,11)"
+                        [disabled]="!srv.validateTopic(ch2, 10)">
+                        <H3>Concepto 1-a</H3>
+                      </button>
+                      <button ion-button class="slide1"(click)="aDinamica2(2,12)"
+                        [disabled]="!srv.validateTopic(ch2, 11)">
+                        <H3>concepto 1-b</H3>
+                      </button>
+                    </ion-item-options>
+                  </ion-item-sliding>
+                </ion-list>
+
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+                      <ion-avatar item-start>
+                        <img src="../../../../../../../assets/imgs/3Dinamica.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right">
+                      <button ion-button class="slide2" (click)="aDinamica3(2,13)"
+                        [disabled]="!srv.validateTopic(ch2, 12)">
+                        <H3>concepto 2-a</H3>
+                      </button>
+                    </ion-item-options>
+                  </ion-item-sliding>
+                </ion-list>
+
+                <ion-list>
+                    <ion-item-sliding>
+                      <ion-item class="slide1">
+                        <ion-avatar item-start>
+                          <img src="../../../../../../../assets/imgs/Evaluacion1.jpg">
+                        </ion-avatar>
+                        <ion-title>
+                          <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+                        </ion-title>
+                      </ion-item>
+                      <ion-item-options side="right">
+                        <button ion-button class="slideE" (click)="aEvaluacion(2,14)" [disabled]="!srv.validateTopic(ch2, 13)">
+                          <H3>Evaluación</H3>
+                        </button>
+                      </ion-item-options>
+            
+                    </ion-item-sliding>
+                  </ion-list>
+
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </div>
+
+  <ion-fab left bottom>
+    <button ion-fab color="secundary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <ion-fab-list side="right">
+      <button ion-fab color="#ffffff" (click)="aHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aManual()">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)=" aChatInteractivo2()">
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

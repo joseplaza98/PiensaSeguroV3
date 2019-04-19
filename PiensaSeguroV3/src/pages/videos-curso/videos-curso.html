@@ -1,0 +1,422 @@
+<!--
+  Generated template for the VideosCursoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>videosCurso</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="cap1" (click)="cargar()">
+        Cap1
+      </ion-segment-button>
+      <ion-segment-button value="cap2" (click)="cargar()">
+        Cap2
+      </ion-segment-button>
+      <ion-segment-button value="cap3" (click)="cargar()">
+        Cap3
+      </ion-segment-button>
+      <ion-segment-button value="cap4" (click)="cargar()">
+        Cap4
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'cap1'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Introducción
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/JXDUKotmsWQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cap2'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Introducción
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/Nxns7cqfMsg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Buscar vector de ataque
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/5eWBdcZ9l7g" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Localizar Objetivo (Barridos)
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/dLDWk53sRmg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Localizar Objetivo (Trazados de rutas)
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/YnaKOhmRVmE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cap3'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Introducción
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/Nxns7cqfMsg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    ¿Que es un analista de sistemas?
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/VeHE2U-Fbd8" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Explorar vulnerabilidades
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/oYiqUpYmBi0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Identificar vulnerabilidades
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/GM2he2dvREw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Obtener Información
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/QpJmW-P3_gs" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Detectar Equipos
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/BHgFqtBBJEo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cap4'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Introducción
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/-BhexYdV0fM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Objetivos
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/XBUHhlbpimo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Concepto de vulnerabilidad
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/9hJ4fgfePfg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Acceso mediante BY PASS
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/RglGqlVzYDQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Importancia de las validaciones
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/7j8o3Mff6V0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    XSS-Directa
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/EWdvW8mtR-w" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    XSS-Indirecta
+                  </ion-card-title>
+                </ion-card-content>
+                <div class="video-container">
+                  <iframe width="340" height="315" src="https://www.youtube.com/embed/inCS6PQYu34" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

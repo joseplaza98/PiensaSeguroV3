@@ -1,0 +1,77 @@
+<!--
+  Generated template for the MenutematicaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Menutematica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="grid-basic-page">
+
+  <ion-card-content>
+    <ion-card class="card">
+
+      <ion-grid>
+        <ion-title class="text">
+          Reconocimiento
+        </ion-title>
+        <ion-row class="content">
+          <ion-col *ngFor="let item of Nmap">
+            <button ion-button round class="text-on-button" (click)="openNavDetailsPage(item)">
+
+              <img src="{{item.imagen}}" class="icon" /> {{item.titulo}}
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card>
+  </ion-card-content>
+
+
+  <ion-card-content>
+      <ion-card class="card">
+  
+        <ion-grid>
+          <ion-title class="text">
+              NETCAT
+          </ion-title>
+          <ion-row class="content">
+            <ion-col *ngFor="let item of NetCat">
+              <button ion-button round class="text-on-button" (click)="openNavDetailsPage(item)">
+  
+                <img src="{{item.imagen}}" class="icon" /> {{item.titulo}}
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+      </ion-card>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-card class="card">
+  
+        <ion-grid>
+          <ion-title class="text">
+              Meta Exploid
+          </ion-title>
+          <ion-row class="content">
+            <ion-col *ngFor="let item of MetaExpl">
+              <button ion-button round class="text-on-button" (click)="openNavDetailsPage(item)">
+  
+                <img src="{{item.imagen}}" class="icon" /> {{item.titulo}}
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+      </ion-card>
+    </ion-card-content>
+</ion-content>

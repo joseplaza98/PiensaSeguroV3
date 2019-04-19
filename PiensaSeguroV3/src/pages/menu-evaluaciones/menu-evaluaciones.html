@@ -1,0 +1,52 @@
+<!--
+  Generated template for the MenuEvaluacionesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>menuEvaluaciones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-slides pager>
+
+    <ion-slide class="fondo">
+      <button class="button-content" (click)="Eva1T1(5,1)" [disabled]="!srv.validateTopic(ch1, 11)">
+        <!-- Foto de negocios creado por freepik - www.freepik.es -->
+        <img src="../../assets/imgs/1EvaluacionTematica.jpg" />
+        <div class="card-title">Evaluacion Capitulo 1</div>
+      </button>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <button class="button-content" (click)="Eva2T2(5,2)" [disabled]="!srv.validateTopic(ch2, 14)">
+        <!-- Foto de negocios creado por snowing - www.freepik.es -->
+        <img src="../../assets/imgs/2EvaluacionTematica.jpg" />
+        <div class="card-title">Evaluacion Capitulo 2</div>
+      </button>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <button class="button-content" (click)="Eva3T3(5,3)" [disabled]="!srv.validateTopic(ch3, 15)">
+        <!-- Foto de negocios creado por mindandi - www.freepik.es -->
+        <img src="../../assets/imgs/4EvaluacionTematica.jpg" />
+        <div class="card-title">Evaluación Capitulo 3</div>
+      </button>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <button class="button-content" (click)="Eva4T4(5,4)" [disabled]="!srv.validateTopic(ch4, 11)">
+        <!-- Foto de negocios creado por mindandi - www.freepik.es -->
+        <img src="../../assets/imgs/5EvaluacionTematica.jpg" />
+        <div class="card-title">Evaluacion Capitulo 4</div>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

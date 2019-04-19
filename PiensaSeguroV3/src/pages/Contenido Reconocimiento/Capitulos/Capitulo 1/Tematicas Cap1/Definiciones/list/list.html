@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title style="font-weight: bold; text-align: center ">Definiciones</ion-card-title>
+      <div style="text-align: justify;">
+
+        <button ion-item *ngFor="let item of miLista" (click)="openNavDetailsPage(item)"
+          icon-start>
+          <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-start></ion-icon>
+          {{ item.title }}
+        </button>
+
+      </div>
+      <ion-list style="text-align: center">
+        <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+          (click)="actividad1(1,2)" [disabled]="!srv.validateTopic(ch1, 1)">Realizar ejercicio</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

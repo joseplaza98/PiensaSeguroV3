@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>aprendeReco</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-slides pager>
+
+    <ion-slide class="fondo">
+      <ion-card>
+
+
+        <button class="button-content" (click)="T1cap1()">
+          <!-- Foto de fondo creado por jannoon028 - www.freepik.es -->
+          <img src="../../../assets/imgs/1ConceptosBasicos.jpg" />
+          <div class="card-title">Capitulo 1</div>
+          <!--Poner en  el resto las palabras claves-->
+        </button>
+
+        <ion-card-content>
+          <ion-list>
+            <ion-title style="text-align: center;font-weight: bold">Palabras Clave:</ion-title>
+            <p style="text-align: center"> Hacker,Cracker y Analsista de sistemas</p>
+          </ion-list>
+          <ion-list>
+            <ion-item style="text-align: center">
+
+              <ion-title class="tittle-progressbar">Tu avance</ion-title>
+            </ion-item>
+            <ion-item class="button-content">
+              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch1.progress" color="primary">
+                <ion-badge range-right> {{ch1.progress}}%</ion-badge>
+              </ion-range>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <ion-card>
+
+        <button class="button-content" (click)="T1cap2()" [disabled]="!srv.validateTopic(ch5, 1)">
+          <!-- Foto de fondo creado por freepik - www.freepik.es -->
+          <img src="../../../assets/imgs/2VectorAtaque.jpg" />
+          <div class="card-title">Capitulo 2</div>
+        </button>
+
+
+        <ion-card-content>
+          <ion-list>
+            <ion-title style="text-align: center;font-weight: bold">Palabras Clave:</ion-title>
+            <p style="text-align: center"> Objetivo, análisis y consultas</p>
+          </ion-list>
+          <ion-list>
+            <ion-item style="text-align: center">
+              <ion-title class="tittle-progressbar">Tu avance</ion-title>
+            </ion-item>
+            <ion-item class="button-content">
+              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch2.progress" color="primary">
+                <ion-badge range-right> {{ch2.progress}}%</ion-badge>
+              </ion-range>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <ion-card>
+
+        <button class="button-content" (click)="T1cap3()" [disabled]="!srv.validateTopic(ch5, 2)">
+          <!-- Foto de negocios creado por rawpixel.com - www.freepik.es -->
+          <img src="../../../assets/imgs/3AnalistaSistemas.jpg" />
+          <div class="card-title">Capitulo 3</div>
+        </button>
+
+        <ion-card-content>
+          <ion-list>
+            <ion-title style="text-align: center;font-weight: bold">Palabras Clave:</ion-title>
+            <p style="text-align: center"> Analsista, modelos y métodos</p>
+          </ion-list>
+          <ion-list>
+            <ion-item style="text-align: center">
+              <ion-title class="tittle-progressbar">Tu avance</ion-title>
+            </ion-item>
+            <ion-item class="button-content">
+              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch3.progress" color="primary">
+                <ion-badge range-right> {{ch3.progress}}%</ion-badge>
+              </ion-range>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="fondo">
+      <ion-card>
+
+        <button class="button-content" (click)="T1cap4()" [disabled]="!srv.validateTopic(ch5, 3)">
+          <!-- Foto de calendario creado por rawpixel.com - www.freepik.es -->
+          <img src="../../../assets/imgs/4AnalistaWeb.jpg" />
+          <div class="card-title">Capitulo 4</div>
+        </button>
+
+
+        <ion-card-content>
+          <ion-list>
+            <ion-title style="text-align: center;font-weight: bold">Palabras Clave:</ion-title>
+            <p style="text-align: center"> Vulnerabilidas, acceso y validaciones</p>
+          </ion-list>
+          <ion-list>
+            <ion-item style="text-align: center">
+              <ion-title class="tittle-progressbar">Tu avance</ion-title>
+            </ion-item>
+            <ion-item class="button-content">
+              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch4.progress" color="primary">
+                <ion-badge range-right> {{ch4.progress}}%</ion-badge>
+              </ion-range>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-fab left bottom>
+    <button ion-fab color="secundary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <ion-fab-list side="right">
+      <button ion-fab color="#ffffff" (click)="aHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aManual()">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

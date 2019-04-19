@@ -1,0 +1,133 @@
+<!--
+  Generated template for the SelecTematicaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>selecTematica</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="intro1">
+        Intro
+      </ion-segment-button>
+      <ion-segment-button value="aprende">
+        Aprende
+      </ion-segment-button>
+      <ion-segment-button value="comandos">
+        Comandos
+      </ion-segment-button>
+      <ion-segment-button value="retos">
+        Retos
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'intro1'">
+      <ion-card>
+        <br />
+        <!-- Foto de tarjeta de visita creado por creativeart - www.freepik.es -->
+        <img class="imagen" src="../../assets/imgs/1Introduccion.jpg" />
+        <ion-card-content>
+          <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+            Introduccion
+          </ion-card-title>
+          <p style="text-align: center"> En esta seccion podrá contextualizar el conocimiento que sera expuesto
+            posteriormente
+            en el desarrollo de las tematicas correspondientes a esta sección.</p>
+          <br />
+          <ion-list style="text-align: center">
+            <button ion-button block outline round icon-end color="primary" (click)="introReco()">Ver introducción
+            </button>
+          </ion-list>
+
+        </ion-card-content>
+      </ion-card>
+
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'aprende'">
+      <ion-card>
+        <br />
+        <!-- Foto de fondo creado por jcomp - www.freepik.es -->
+        <img class="imagen" src="../../assets/imgs/2Aprender.jpg" />
+        <ion-card-content>
+          <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+            Aprender tematica
+          </ion-card-title>
+          <p style="text-align: center"> En esta seccion podras parender diferentes tematicas referentes a la seguridad
+            informatica y el manejo de comandos para la extraccion de informacion sobre el sistema informático.</p>
+          <br />
+          <ion-list style="text-align: center">
+            <button ion-button block outline round icon-end color="primary" (click)="aprendeReco()">Ver temática
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'comandos'">
+      <ion-card>
+        <br />
+        <!-- Foto de fondo creado por nikitabuida - www.freepik.es -->
+        <img class="imagen" src="../assets/imgs/3Comandos.jpg" />
+        <ion-card-content>
+          <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+            Comandos
+          </ion-card-title>
+          <p style="text-align: center"> En esta seccion tendra un diccionario de comandos y el uso respectivo para la
+            extracción
+            de información de un sistema informático.</p>
+          <br />
+          <ion-list style="text-align: center">
+            <button ion-button block outline round icon-end color="primary" (click)="comandosReco()">Ver Comandos
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'retos'">
+      <ion-card>
+        <br />
+        <!-- Foto de negocios creado por creativeart - www.freepik.es -->
+        <img class="imagen" src="../../assets/imgs/4Retos.jpg" />
+        <ion-card-content>
+          <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+            Retos
+          </ion-card-title>
+          <p style="text-align: center"> En esta seccion podrá encontrar retos para poner en practica lo aprendido.</p>
+          <br />
+          <ion-list style="text-align: center">
+            <button ion-button block outline round icon-end color="primary" (click)="introReco()">Ver Retos</button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+  </div>
+
+  <ion-fab left bottom>
+    <button ion-fab color="primary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <ion-fab-list side="right">
+      <button ion-fab (click)="aHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="light" (click)="aManual()">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

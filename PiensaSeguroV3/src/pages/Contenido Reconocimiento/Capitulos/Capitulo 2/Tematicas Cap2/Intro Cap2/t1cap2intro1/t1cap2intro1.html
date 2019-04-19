@@ -1,0 +1,109 @@
+<!--
+  Generated template for the T1cap2intro1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>t1cap2intro1</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="CartaBlanca">
+        C-Blanca
+      </ion-segment-button>
+      <ion-segment-button value="Confidencialidad" (click)="visitTopic(2,2)" [disabled]="!srv.validateTopic(ch2, 1)">
+        Confidencialidad
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+
+  <div [ngSwitch]="intro">
+
+    <ion-list *ngSwitchCase="'CartaBlanca'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/eL856PwMmz4" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-title class="card-title" style="text-align: center">
+                    Carta blanca
+                  </ion-title>
+                  <p class="card-subtitle" style="text-align: justify"> Contrato que firma la empresa y que le da
+                    libertad al hacker de hacer lo
+                    que quiera.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/EHjmxujXIaQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-title class="card-title" style="text-align: center">
+                    ¿Para que sirve?
+                  </ion-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'Confidencialidad'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/-WsO5BLAxSI" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-title class="card-title" style="text-align: center">
+                    Confidencialidad
+                  </ion-title>
+                  <p class="card-subtitle" style="text-align: justify"> El analista firma un contrato en que se
+                    establece el carácter confidencial
+                    de los datos que encuentre.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+  </div>
+
+</ion-content>

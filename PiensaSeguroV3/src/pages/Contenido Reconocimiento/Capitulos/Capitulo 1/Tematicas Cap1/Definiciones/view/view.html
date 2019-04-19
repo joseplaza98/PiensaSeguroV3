@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title icon-end>
+      {{ item.title }}
+      <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}"></ion-icon>
+    </ion-title>
+
+
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <ion-card>
+
+    <img src="{{item.imagen}}" />
+    <ion-card-content>
+      <ion-card-title style="text-align: center; font-weight: bold;">
+        {{item.title}}
+      </ion-card-title>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description }}
+      </p>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description1 }}
+      </p>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description2 }}
+      </p>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description3 }}
+      </p>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description4 }}
+      </p>
+
+      <p style="text-align: justify; margin-top: 5%;">
+        {{ item.description5 }}
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

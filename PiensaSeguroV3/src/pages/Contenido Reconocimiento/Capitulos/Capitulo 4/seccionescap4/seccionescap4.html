@@ -1,0 +1,126 @@
+<!--
+  Generated template for the Seccionescap4Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>seccionescap4</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="intro1" [disabled]="!srv.validateTopic(ch3, 15)">
+        Intro
+      </ion-segment-button>
+      <ion-segment-button value="vulnerabilidad" (click)="visitTopic(4,1)" [disabled]="!srv.validateTopic(ch3, 15)">
+        vulnerable
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'intro1'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class=" video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/XBUHhlbpimo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Introducción
+                  </ion-card-title>
+                  <p style="text-align: justify">En este capítulo veremos hasta que punto y de que formas pueden
+                    obtenerse,
+                    cambiarse o incluso como hacer desaparecer contenidos web y datos sensibles de empresas o
+                    estamentos
+                    gubernamentales en su contacto con el mundo a través de sus paginas web.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'vulnerabilidad'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class=" video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/9hJ4fgfePfg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Vulnerabilidad
+                  </ion-card-title>
+                  <p style="text-align: justify">Se tratarán diversos vectores de ataque conocidos como por ejemplo el
+                    XSS
+                    (Cross Site Scripting), RFI (Remote File Includer), Autentificación web (mediante scripts o
+                    bypass),
+                    SQL y Blind SQL inyection. </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class=" video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/i3CTOvutACc" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    ¿Que es una vulnerabilidad?
+                  </ion-card-title>
+                   <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary" (click)="pop1(4,2)" [disabled]="!srv.validateTopic(ch4, 1)">Acceso y validaciones</button>
+                </ion-list>
+                </ion-card-content>
+               
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+
+  <ion-fab left bottom>
+    <button ion-fab color="secundary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <ion-fab-list side="right">
+      <button ion-fab color="#ffffff" (click)="aHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aManual()">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+      <button ion-fab color="#ffffff" (click)="aChatInteractivo4()">
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,64 @@
+page-menutematica {
+    .grid-basic-page {
+
+        ion-col div {
+          background-color: #f0f5ff;
+          border: 1px solid #e6e9ee;
+          border-radius: 2px;
+          text-align: center;
+        }
+      
+        p {
+          padding: 10px 0 0 10px !important;
+          margin: 0;
+          
+          
+        }
+      
+      }
+
+    .card{
+      align-content: center;
+    }
+
+      .button{
+        width: 250px;
+        height:50px;
+
+      }
+
+      .button2{
+        width: 100%;
+        height:50px;
+       align-content: center;
+       
+      }
+
+      .text{
+        text-align: center;
+      }
+
+      .content{
+        margin: 10px;
+      
+      }
+
+      .icon{
+        text-align: center;
+        width: 100%;
+        margin-left:initial;
+        margin-right: 10%;
+      }
+
+      .text-on-button > .button-inner {
+        flex-direction:column;
+        
+      }
+      .button{
+        width: 120px;
+        height:100px;
+      }
+
+
+
+}

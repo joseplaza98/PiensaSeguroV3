@@ -1,0 +1,126 @@
+<!--
+  Generated template for the T1cap4vul1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+    <ion-title>t1cap4vul1</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro">
+      <ion-segment-button value="acceso" [disabled]="!srv.validateTopic(ch4, 2)">
+        Acceso
+      </ion-segment-button>
+      <ion-segment-button value="validaciones" (click)="visitTopic(4,3)" [disabled]="!srv.validateTopic(ch4, 2)">
+        Validaciones
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'acceso'">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/RglGqlVzYDQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                  By Pass
+                </ion-card-title>
+                <ion-card-content>
+                  <p style="text-align: justify">Esta vulnerabilidad nos permite acceder a áreas restringidas a
+                    usuarios,
+                    “protegidas” por user y pass sin que sea necesario introducir un pass.</p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/csLeyuyFf_g" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                  Ejemplo ataque By Pass
+                </ion-card-title>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'validaciones'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/7j8o3Mff6V0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    Validaciones
+                  </ion-card-title>
+                  <p style="text-align: justify">Vamos a ver diferentes formas de saltar scripts de validacion java,
+                    php,
+                    etc....
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-card>
+                <div class="video-container">
+                  <iframe width="340" height="200" src="https://www.youtube.com/embed/7j8o3Mff6V0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <ion-card-content>
+                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+                    ¿Porque proteger la información?
+                  </ion-card-title>
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary" (click)="pop1(4,4)"
+                      [disabled]="!srv.validateTopic(ch4, 3)">Ver</button>
+                  </ion-list>
+                </ion-card-content>
+
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

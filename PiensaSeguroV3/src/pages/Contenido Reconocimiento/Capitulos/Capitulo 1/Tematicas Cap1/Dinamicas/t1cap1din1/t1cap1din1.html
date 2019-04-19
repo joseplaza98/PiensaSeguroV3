@@ -1,0 +1,109 @@
+<!--
+  Generated template for the T1cap1din1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>t1cap1din1</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <h1 style="text-align: center; font-weight: bold">Comprueba tu aprendizaje a partir de estos cortos test</h1>
+      <br />
+      <p style="text-align: justify">¿Aprendiste lo necesario sobre esta sección?, entonces realiza estos test
+        y corroborra tu aprendizaje.</p>
+      <br />
+      <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
+      <img style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+        src="../../../../../../../assets/imgs/Actividades 1/Actividad 2.jpg">
+    </ion-card-content>
+
+    <br />
+
+    <ion-card-content>
+      <h1 style="text-align: center;font-weight: bold">Instrucciones</h1>
+      <p style="text-align: center;font-weight: bold">Desliza el nivel que deseas realizar hacia la izquierda y
+        empieza tus test.
+      </p>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item-sliding>
+            <ion-item class="slide1">
+            <ion-avatar item-start>
+              <img src="../../../../../../../assets/imgs/Dinamica.jpg">
+            </ion-avatar>
+            <ion-title>
+              <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+            </ion-title>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button outline round icon-end class="slide2" (click)="aDinamica1(1,7)" [disabled]="!srv.validateTopic(ch1, 6)">
+              <H3>Concepto 1-a</H3>
+            </button>
+            <button ion-button outline round icon-end class="slide1" (click)="aDinamica2(1,8)" [disabled]="!srv.validateTopic(ch1, 7)">
+              <H3>concepto 1-b</H3>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+      <ion-list>
+        <ion-item-sliding>
+            <ion-item class="slide1">
+            <ion-avatar item-start>
+              <img src="../../../../../../../assets/imgs/3Dinamica.jpg">
+            </ion-avatar>
+            <ion-title>
+              <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+            </ion-title>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button outline round icon-end class="slide2" (click)="aDinamica3(1,9)" [disabled]="!srv.validateTopic(ch1, 8)">
+              <H3>concepto 2-a</H3>
+            </button>
+            <button ion-button outline round icon-end class="slide1" (click)="aDinamica4(1,10)" [disabled]="!srv.validateTopic(ch1, 9)">
+              <H3>concepto 2-b</H3>
+            </button>
+          </ion-item-options>
+
+        </ion-item-sliding>
+      </ion-list>
+
+      <ion-list>
+          <ion-item-sliding >
+            <ion-item class="slide1">
+              <ion-avatar item-start>
+                <img src="../../../../../../../assets/imgs/Evaluacion1.jpg">
+              </ion-avatar>
+              <ion-title>
+                <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
+              </ion-title>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button round icon-end class="slideE" (click)="aEvaluacion(1,11)" [disabled]="!srv.validateTopic(ch1, 10)">
+                <H3>Evaluación</H3>
+              </button>
+            </ion-item-options>
+  
+          </ion-item-sliding>
+        </ion-list>
+
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

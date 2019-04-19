@@ -1,0 +1,63 @@
+<!--
+  Generated template for the Seccionescap1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>seccionescap1</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+    <ion-slides pager>
+
+        <ion-slide class="fondo">
+            <button class="button-content" (click)="aDefinicion(1,1)">
+                <!-- Foto de negocios creado por freepik - www.freepik.es -->
+                <img src="../../../assets/imgs/1Definiciones.jpg" />
+                <div class="card-title">Definiciones</div>
+              </button>
+        </ion-slide>
+      
+        <ion-slide class="fondo">
+            <button class="button-content" (click)="aTiposAtaque(1,3)" [disabled]="!srv.validateTopic(ch1, 2)">
+                <!-- Foto de fondo creado por rawpixel.com - www.freepik.es -->
+                <img src="../../../assets/imgs/2TipoAtaque.jpg" />
+                <div class="card-title">Tipos de ataque</div>
+              </button>
+        </ion-slide>
+      
+        <ion-slide class="fondo">
+            <button class="button-content" (click)="aDinamica(1,6)" [disabled]="!srv.validateTopic(ch1, 5)">
+                <!-- Foto de madera creado por jcomp - www.freepik.es -->
+                <img src="../../../assets/imgs/3Dinamica.jpg" />
+                <div class="card-title">Dinámicas</div>
+              </button>
+        </ion-slide>
+        
+      
+      </ion-slides>
+
+
+  <ion-fab left bottom>
+      <button ion-fab color="secundary">
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+      <ion-fab-list side="right">
+        <button ion-fab color="#ffffff" (click)="aHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <button ion-fab color="#ffffff" (click)="aManual()">
+          <ion-icon name="md-help"></ion-icon>
+        </button>
+        <button ion-fab color="#ffffff" (click)=" aChatInteractivo1()">
+            <ion-icon name="chatboxes"></ion-icon>
+          </button>
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>
