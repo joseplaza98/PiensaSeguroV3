@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AuthService } from '../../services/auth.service.';
 import { HomePage } from '../home/home';
@@ -24,7 +24,7 @@ export class LoginPage {
   user = {} as User;
 
 
-  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public authService: AuthService) {
+  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public viewCtrl: ViewController, public authService: AuthService) {
   }
 
   ionViewDidLoad() {
@@ -54,10 +54,24 @@ export class LoginPage {
     
     .then((returnedUser) => {
         this.navCtrl.setRoot(HomePage);
-        alert('Logeado con exito');
+        const alert = this.alertCtrl.create({
+          title: 'Bienvenido',
+          subTitle: 'Piensa Seguro le da la bienvenida al curso básico de Seguridad Informática en las redes.',
+          buttons: ['OK']
+        });
+        alert.present();
+
       })
       .catch((err) => {
-        alert('email o password incorrectos por favor intentelo de nuevo');
+
+        const alert = this.alertCtrl.create({
+          title: 'Error',
+          subTitle: 'Email o contraseña incorrectos por favor intentelo de nuevo.',
+          buttons: ['OK']
+        });
+        alert.present();
+
+ 
         console.log('Error', err);
         
       })

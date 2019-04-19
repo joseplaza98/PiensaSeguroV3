@@ -18,30 +18,31 @@
 
 
 <ion-content padding>
-
+<div class="animated slow bounceInDown delay-500ms">
   <img class="mediana" src="../../assets/icon/LogoPs.png">
-  <ion-list>
-    <ion-item>
+</div>
+  <ion-list >
+    <ion-item class="animated slow bounceInLeft delay-500ms">
       <ion-label floating>Correo institucional</ion-label>
       <ion-input type="text" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="animated slow bounceInRight delay-500ms">
       <ion-label floating>Contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
     <br />
     
-    <ion-item>
+    <ion-item >
       <div class="row responsive-sm">
         <div class="col col-25">
-          <button ion-button block outline round icon-end color="primary" (click)="Login(user)" style="font-weight: bold">Ingresar
+          <button ion-button block outline round icon-end color="primary" class="animated slow bounceInLeft delay-500ms" (click)="Login(user)" style="font-weight: bold">Ingresar
             <ion-icon name="md-arrow-dropright-circle"></ion-icon>
           </button>
         </div>
 
         <div class="col">
-          <button ion-button block outline round icon-end color="primary" (click)="Register()" style="font-weight: bold">Registrar
+          <button ion-button block outline round icon-end color="primary" class="animated slow bounceInLeft delay-500ms" (click)="Register()" style="font-weight: bold">Registrar
             <ion-icon name="md-arrow-dropright-circle"></ion-icon>
           </button>
         </div>
@@ -49,13 +50,13 @@
 
       <div class="row responsive-sm">
         <div class="col">
-          <button ion-button block outline round icon-end color="primary" (click)="LoginFacebook()">Facebook
+          <button ion-button block outline round icon-end color="primary" class="animated slow bounceInRight delay-500ms" (click)="LoginFacebook()">Facebook
             <ion-icon name="logo-facebook"></ion-icon>
           </button>
         </div>
 
         <div class="col">
-          <button ion-button block outline round icon-end color="danger" (click)="LoginGoogle()">Google
+          <button ion-button block outline round icon-end color="danger" class="animated slow bounceInRight delay-500ms" (click)="LoginGoogle()">Google
             <ion-icon name="logo-google"></ion-icon>
           </button>
         </div>

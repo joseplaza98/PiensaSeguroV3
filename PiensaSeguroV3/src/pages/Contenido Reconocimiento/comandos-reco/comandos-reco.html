@@ -11,10 +11,10 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="Nmap" (click)="cargar()" [disabled]="!srv.validateTopic(ch3, 8)">
+      <ion-segment-button value="Nmap" class="animated slow zoomIn delay-500ms" (click)="cargar()" [disabled]="!srv.validateTopic(ch3, 8)">
         Nmap
       </ion-segment-button>
-      <ion-segment-button value="netcat" (click)="cargar()" [disabled]="!srv.validateTopic(ch3, 10)">
+      <ion-segment-button value="netcat" class="animated slow zoomIn delay-500ms" (click)="cargar()" [disabled]="!srv.validateTopic(ch3, 10)">
         NetCat
       </ion-segment-button>
     </ion-segment>
@@ -24,7 +24,7 @@
 <ion-content class="fondo">
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'Nmap'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-1s">
         <ion-card-content>
           <ion-card-title style="text-align: center;font-weight: bold">20 Comandos escenciales con Nmap</ion-card-title>
           <p style="text-align: justify">A continuación encontrará 20 comantos escenciales empleando Nmap para que use
@@ -40,7 +40,7 @@
 
     <ion-list *ngSwitchCase="'netcat'">
       <!--Añadir los comandos NetCat actualizados y cambiar el iframe por el nuevo-->
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-1s">
         <ion-card-content>
           <ion-card-title style="text-align: center;font-weight: bold">20 Comandos escenciales con NetCat
           </ion-card-title>

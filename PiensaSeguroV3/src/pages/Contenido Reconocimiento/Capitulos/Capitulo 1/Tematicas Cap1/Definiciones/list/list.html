@@ -15,7 +15,7 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
+  <ion-card class="animated slow bounceInLeft delay-500ms">
     <ion-card-content>
       <ion-card-title style="font-weight: bold; text-align: center ">Definiciones</ion-card-title>
       <div style="text-align: justify;">
@@ -28,7 +28,7 @@
 
       </div>
       <ion-list style="text-align: center">
-        <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+        <button ion-button block outline round icon-end color="primary" class="animated slow infinite heartBeat delay-2s" style="font-weight: bold"
           (click)="actividad1(1,2)" [disabled]="!srv.validateTopic(ch1, 1)">Realizar ejercicio</button>
       </ion-list>
     </ion-card-content>

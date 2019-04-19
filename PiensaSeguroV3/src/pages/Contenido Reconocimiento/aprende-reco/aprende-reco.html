@@ -7,7 +7,7 @@
 
 <ion-content class="card-background-page">
 
-  <ion-slides pager>
+  <ion-slides pager class="animated slow zoomIn delay-500ms">
 
     <ion-slide class="fondo">
       <ion-card>
@@ -15,8 +15,11 @@
 
         <button class="button-content" (click)="T1cap1()">
           <!-- Foto de fondo creado por jannoon028 - www.freepik.es -->
+          
           <img src="../../../assets/imgs/1ConceptosBasicos.jpg" />
+          
           <div class="card-title">Capitulo 1</div>
+        
           <!--Poner en  el resto las palabras claves-->
         </button>
 
@@ -103,7 +106,7 @@
         <button class="button-content" (click)="T1cap4()" [disabled]="!srv.validateTopic(ch5, 3)">
           <!-- Foto de calendario creado por rawpixel.com - www.freepik.es -->
           <img src="../../../assets/imgs/4AnalistaWeb.jpg" />
-          <div class="card-title">Capitulo 4</div>
+          <div class="card-title" >Capitulo 4</div>
         </button>
 
 
@@ -129,7 +132,7 @@
   </ion-slides>
 
 
-  <ion-fab left bottom>
+  <ion-fab left bottom class="animated slow zoomIn delay-500ms">
     <button ion-fab color="secundary">
       <ion-icon name="arrow-dropright"></ion-icon>
     </button>

@@ -15,11 +15,11 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
+  <ion-card class="animated slow bounceInLeft delay-500ms">
     <img src="../../assets/icon/LogoPs (2).png" />
   </ion-card>
 
-  <ion-card>
+  <ion-card class="animated slow bounceInRight delay-500ms">
     <!--<a href="https://www.freepik.es/fotos-vectores-gratis/negocios">Foto de negocios creado por yanalya - www.freepik.es</a>-->
     <img src="../../assets/imgs/Login1.jpg" />
     <ion-card-content>
@@ -29,13 +29,14 @@
       <p style="text-align: center">
         Inicie sesión para comenzar su proceso de aprendizaje
       </p>
-      <div style="align-content: center;   margin: 1rem; padding: 1rem; text-align: center;">
+      <div class="animated slow infinite heartBeat delay-2s"
+        style="align-content: center;   margin: 1rem; padding: 1rem; text-align: center;">
         <button ion-button outline round (click)="aLogin()">Ir</button>
       </div>
     </ion-card-content>
   </ion-card>
 
-  <ion-slides pager>
+  <ion-slides pager class="animated slow bounceInLeft delay-500ms">
 
     <ion-slide>
       <ion-card>
@@ -66,7 +67,8 @@
             apicación.
           </p>
           <div style="align-content: center;   margin: 1rem; padding: 1rem; text-align: center;">
-            <button ion-button outline round (click)="aAbout()">ver</button>
+            <button ion-button outline round class="animated slow infinite heartBeat delay-2s"
+              (click)="aAbout()">ver</button>
           </div>
         </ion-card-content>
       </ion-card>

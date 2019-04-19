@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Home</ion-title>
-    <ion-buttons start>
+    <ion-buttons start class="animated slow bounceInLeft delay-500ms">
       <button ion-button (click)="singOut()">
         <ion-chip style="background: #ffff">
           <ion-avatar slot="end">
@@ -18,41 +18,50 @@
 
   <div class="row responsive-sm">
     <div class="col col-25">
-      <button class="button-content" (click)="aSeleccionTematica()">
-        <!-- Foto de escuela creado por freepik - www.freepik.es -->
-        <img src="../../assets/imgs/1Tematica.jpg" />
-        <div class="card-title">Temática</div>
-        <div class="card-subtitle">Aprende diferentes de temas en relacion a la seguridad informática</div>
-      </button>
+      <div class="animated slow bounceInRight delay-500ms">
+        <button class="button-content" (click)="aSeleccionTematica()">
+          <!-- Foto de escuela creado por freepik - www.freepik.es -->
+          <img src="../../assets/imgs/1Tematica.jpg" />
+          <div class="card-title">Temática</div>
+          <div class="card-subtitle">Aprende diferentes de temas en relacion a la seguridad informática</div>
+        </button>
+      </div>
 
-
-      <button class="button-content" (click)=" menuEvaluaciones()">
-        <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
-        <img src="../../assets/imgs/2Evaluacion.jpg" />
-        <div class="card-title">Evaluación</div>
-        <div class="card-subtitle">Evalua y mejora tus conocimientos sobre seguridad informática</div>
-      </button>
+      <div class="animated slow bounceInLeft delay-500ms">
+        <button class="button-content" (click)=" menuEvaluaciones()">
+          <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
+          <img src="../../assets/imgs/2Evaluacion.jpg" />
+          <div class="card-title">Evaluación</div>
+          <div class="card-subtitle">Evalua y mejora tus conocimientos sobre seguridad informática</div>
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="row responsive-sm">
     <div class="col">
-      <button class="button-content" (click)="aEjerciciosCurso()">
-        <!-- Foto de escuela creado por freepik - www.freepik.es -->
-        <img src="../../assets/imgs/3Ejercicio.jpg" />
-        <div class="card-title">Ejercicio</div>
-        <div class="card-subtitle">Prueba tus conocimientos sobre segurida informática</div>
-      </button>
-      <button class="button-content" (click)="aVideosCurso()">
-        <!-- Foto de fondo creado por rawpixel.com - www.freepik.es -->
-        <img src="../../assets/imgs/4Videos.jpg" />
-        <div class="card-title">Video</div>
-        <div class="card-subtitle">Contenido audio visual para complementar sus conocimientos</div>
-      </button>
+      <div class="animated slow bounceInRight delay-500ms">
+        <button class="button-content" (click)="aEjerciciosCurso()">
+          <!-- Foto de escuela creado por freepik - www.freepik.es -->
+          <img src="../../assets/imgs/3Ejercicio.jpg" />
+          <div class="card-title">Ejercicio</div>
+          <div class="card-subtitle">Prueba tus conocimientos sobre segurida informática</div>
+        </button>
+      </div>
+
+      <div class="animated slow bounceInLeft delay-500ms">
+        <button class="button-content" (click)="aVideosCurso()">
+          <!-- Foto de fondo creado por rawpixel.com - www.freepik.es -->
+          <img src="../../assets/imgs/4Videos.jpg" />
+          <div class="card-title">Video</div>
+          <div class="card-subtitle">Contenido audio visual para complementar sus conocimientos</div>
+        </button>
+      </div>
     </div>
   </div>
 
-  <ion-fab left bottom>
+
+  <ion-fab left bottom class="animated slow zoomIn delay-500ms">
     <button ion-fab color="secundary">
       <ion-icon name="arrow-dropright"></ion-icon>
     </button>

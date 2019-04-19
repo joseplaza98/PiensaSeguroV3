@@ -11,16 +11,16 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="intro1">
+      <ion-segment-button value="intro1" class="animated slow zoomIn delay-500ms">
         Intro
       </ion-segment-button>
-      <ion-segment-button value="aprende">
+      <ion-segment-button value="aprende" class="animated slow zoomIn delay-600ms">
         Aprende
       </ion-segment-button>
-      <ion-segment-button value="comandos">
+      <ion-segment-button value="comandos" class="animated slow zoomIn delay-700ms">
         Comandos
       </ion-segment-button>
-      <ion-segment-button value="retos">
+      <ion-segment-button value="retos" class="animated slow zoomIn delay-800ms">
         Retos
       </ion-segment-button>
 
@@ -32,7 +32,7 @@
 <ion-content class="fondo">
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'intro1'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <br />
         <!-- Foto de tarjeta de visita creado por creativeart - www.freepik.es -->
         <img class="imagen" src="../../assets/imgs/1Introduccion.jpg" />
@@ -45,7 +45,7 @@
             en el desarrollo de las tematicas correspondientes a esta sección.</p>
           <br />
           <ion-list style="text-align: center">
-            <button ion-button block outline round icon-end color="primary" (click)="introReco()">Ver introducción
+            <button ion-button block outline round icon-end color="primary" class="animated slow infinite heartBeat delay-2s" (click)="introReco()">Ver introducción
             </button>
           </ion-list>
 
@@ -57,7 +57,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'aprende'">
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <br />
         <!-- Foto de fondo creado por jcomp - www.freepik.es -->
         <img class="imagen" src="../../assets/imgs/2Aprender.jpg" />
@@ -69,7 +69,7 @@
             informatica y el manejo de comandos para la extraccion de informacion sobre el sistema informático.</p>
           <br />
           <ion-list style="text-align: center">
-            <button ion-button block outline round icon-end color="primary" (click)="aprendeReco()">Ver temática
+            <button ion-button block outline round icon-end color="primary" class="animated slow infinite heartBeat delay-2s" (click)="aprendeReco()">Ver temática
             </button>
           </ion-list>
         </ion-card-content>
@@ -77,7 +77,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'comandos'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <br />
         <!-- Foto de fondo creado por nikitabuida - www.freepik.es -->
         <img class="imagen" src="../assets/imgs/3Comandos.jpg" />
@@ -90,7 +90,7 @@
             de información de un sistema informático.</p>
           <br />
           <ion-list style="text-align: center">
-            <button ion-button block outline round icon-end color="primary" (click)="comandosReco()">Ver Comandos
+            <button ion-button block outline round icon-end color="primary" class="animated slow infinite heartBeat delay-2s" (click)="comandosReco()">Ver Comandos
             </button>
           </ion-list>
         </ion-card-content>
@@ -98,7 +98,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'retos'">
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <br />
         <!-- Foto de negocios creado por creativeart - www.freepik.es -->
         <img class="imagen" src="../../assets/imgs/4Retos.jpg" />
@@ -109,7 +109,7 @@
           <p style="text-align: center"> En esta seccion podrá encontrar retos para poner en practica lo aprendido.</p>
           <br />
           <ion-list style="text-align: center">
-            <button ion-button block outline round icon-end color="primary" (click)="introReco()">Ver Retos</button>
+            <button ion-button block outline round icon-end color="primary" class="animated slow infinite heartBeat delay-2s" (click)="introReco()">Ver Retos</button>
           </ion-list>
         </ion-card-content>
       </ion-card>
@@ -117,7 +117,7 @@
 
   </div>
 
-  <ion-fab left bottom>
+  <ion-fab left bottom class="animated slow zoomIn delay-500ms">
     <button ion-fab color="primary">
       <ion-icon name="arrow-dropright"></ion-icon>
     </button>

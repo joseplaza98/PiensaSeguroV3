@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ManualPage } from '../pages/manual/manual';
 import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
@@ -124,7 +124,6 @@ import { HttpModule } from '@angular/http';
 import { ProgressService } from '../services/progress.service';
 
 
-
 export const firebaseConfig = {
   apiKey: "AIzaSyCwVgzGQSNBXix6qTgaX4HptCyZ3fs47HI",
   authDomain: "loginpiensaseguro.firebaseapp.com",
@@ -221,6 +220,7 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,

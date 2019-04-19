@@ -12,16 +12,20 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="cap1" (click)="cargar()" [disabled]="!srv.validateTopic(ch1, 10)">
+      <ion-segment-button value="cap1" class="animated slow zoomIn delay-500ms" (click)="cargar()"
+        [disabled]="!srv.validateTopic(ch1, 10)">
         Cap1
       </ion-segment-button>
-      <ion-segment-button value="cap2" (click)="cargar()" [disabled]="!srv.validateTopic(ch2, 13)">
+      <ion-segment-button value="cap2" class="animated slow zoomIn delay-600ms" (click)="cargar()"
+        [disabled]="!srv.validateTopic(ch2, 13)">
         Cap2
       </ion-segment-button>
-      <ion-segment-button value="cap3" (click)="cargar()" [disabled]="!srv.validateTopic(ch3, 15)">
+      <ion-segment-button value="cap3" class="animated slow zoomIn delay-700ms" (click)="cargar()"
+        [disabled]="!srv.validateTopic(ch3, 15)">
         Cap3
       </ion-segment-button>
-      <ion-segment-button value="cap4" (click)="cargar()" [disabled]="!srv.validateTopic(ch4, 9)">
+      <ion-segment-button value="cap4" class="animated slow zoomIn delay-800ms" (click)="cargar()"
+        [disabled]="!srv.validateTopic(ch4, 9)">
         Cap4
       </ion-segment-button>
     </ion-segment>

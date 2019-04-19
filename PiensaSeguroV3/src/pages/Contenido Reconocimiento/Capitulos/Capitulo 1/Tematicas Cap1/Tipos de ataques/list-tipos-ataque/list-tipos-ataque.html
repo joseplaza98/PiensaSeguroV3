@@ -14,7 +14,7 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
+  <ion-card class="animated slow bounceInLeft delay-500ms">
     <ion-card-content>
       <ion-card-title style="font-weight: bold; text-align: center ">Nivel de ataque</ion-card-title>
       <div style="text-align: justify;">
@@ -26,13 +26,13 @@
 
       </div>
       <ion-list style="text-align: center">
-        <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+        <button ion-button block outline round icon-end color="primary" style="font-weight: bold" class="animated slow infinite heartBeat delay-2s"
           (click)="actividad1(1,4)" [disabled]="!srv.validateTopic(ch1, 3)">Realizar ejercicio</button>
       </ion-list>
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="animated slow bounceInLeft delay-500ms">
     <ion-card-content>
       <ion-card-title style="font-weight: bold; text-align: center ">Ataques tipo 2</ion-card-title>
       <div style="text-align: justify;">
@@ -44,7 +44,7 @@
 
       </div>
       <ion-list style="text-align: center">
-        <button ion-button block outline round icon-end color="primary" style="font-weight: bold"
+        <button ion-button block outline round icon-end color="primary" style="font-weight: bold" class="animated slow infinite heartBeat delay-2s"
           (click)="actividad2(1,5)" [disabled]="!srv.validateTopic(ch1, 4)">Realizar ejercicio</button>
       </ion-list>
     </ion-card-content>
