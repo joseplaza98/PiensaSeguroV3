@@ -11,16 +11,20 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="explorar" [disabled]="!srv.validateTopic(ch3, 1)">
+      <ion-segment-button value="explorar" class="animated slow zoomIn delay-500ms"
+        [disabled]="!srv.validateTopic(ch3, 1)">
         Explorar
       </ion-segment-button>
-      <ion-segment-button value="idenditificar"(click)="visitTopic(3,2)" [disabled]="!srv.validateTopic(ch3, 1)">
+      <ion-segment-button value="idenditificar" class="animated slow zoomIn delay-500ms" (click)="visitTopic(3,2)"
+        [disabled]="!srv.validateTopic(ch3, 1)">
         Identificar
       </ion-segment-button>
-      <ion-segment-button value="obtener" (click)="visitTopic(3,3)" [disabled]="!srv.validateTopic(ch3, 2)">
+      <ion-segment-button value="obtener" class="animated slow zoomIn delay-500ms" (click)="visitTopic(3,3)"
+        [disabled]="!srv.validateTopic(ch3, 2)">
         Obtención
       </ion-segment-button>
-      <ion-segment-button value="detectar" (click)="visitTopic(3,4)" [disabled]="!srv.validateTopic(ch3, 3)">
+      <ion-segment-button value="detectar" class="animated slow zoomIn delay-500ms" (click)="visitTopic(3,4)"
+        [disabled]="!srv.validateTopic(ch3, 3)">
         Detectar
       </ion-segment-button>
     </ion-segment>
@@ -37,7 +41,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/oYiqUpYmBi0" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -47,7 +51,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Explorar Vulnerabilidades
                   </ion-card-title>
-                  <p style="text-align: justify"> Verificar y encontrar todas y cada una de las posibles debilidades del
+                  <p style="text-align: center"> Verificar y encontrar todas y cada una de las posibles debilidades del
                     sistema informatico a atacar para asi de este modo tener una mayor efectividad e impacto.</p>
                 </ion-card-content>
               </ion-card>
@@ -64,7 +68,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/GM2he2dvREw" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -74,7 +78,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Identificar Vulnerabilidades
                   </ion-card-title>
-                  <p style="text-align: justify"> Marcar todas y cada una de las posibles fallas para elegir la opcion
+                  <p style="text-align: center"> Marcar todas y cada una de las posibles fallas para elegir la opcion
                     mas
                     viable al momento de realziar un ataque de forma que el sistema no tenga opcion para detener el
                     ataque.</p>
@@ -91,7 +95,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/QpJmW-P3_gs" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -101,7 +105,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Obtener Información
                   </ion-card-title>
-                  <p style="text-align: justify"> El analista firma un contrato en que se establece el carácter
+                  <p style="text-align: center"> El analista firma un contrato en que se establece el carácter
                     confidencial
                     de los datos que encuentre.</p>
                 </ion-card-content>
@@ -117,7 +121,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/BHgFqtBBJEo" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -127,7 +131,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Detectar Equipos
                   </ion-card-title>
-                  <p style="text-align: justify"> En pocas palabras permite observar todos los ordenadores conectados a
+                  <p style="text-align: center"> En pocas palabras permite observar todos los ordenadores conectados a
                     una
                     misma red de manera que podamos tener control sobre todos ellos, obtener información sobre cada uno.
                   </p>

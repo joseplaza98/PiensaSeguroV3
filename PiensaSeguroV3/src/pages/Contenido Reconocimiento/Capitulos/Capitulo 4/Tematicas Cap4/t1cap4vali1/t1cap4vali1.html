@@ -11,16 +11,20 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="t1-t2" [disabled]="!srv.validateTopic(ch4, 4)">
+      <ion-segment-button value="t1-t2" class="animated slow zoomIn delay-500ms"
+        [disabled]="!srv.validateTopic(ch4, 4)">
         XSS-RFI
       </ion-segment-button>
-      <ion-segment-button value="t3-t4" (click)="visitTopic(4,7)" [disabled]="!srv.validateTopic(ch4, 6)">
+      <ion-segment-button value="t3-t4" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,7)"
+        [disabled]="!srv.validateTopic(ch4, 6)">
         Cookie-Http
       </ion-segment-button>
-      <ion-segment-button value="t5-t6" (click)="visitTopic(4,8)" [disabled]="!srv.validateTopic(ch4, 7)">
+      <ion-segment-button value="t5-t6" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,8)"
+        [disabled]="!srv.validateTopic(ch4, 7)">
         SQL-BSQL
       </ion-segment-button>
-      <ion-segment-button value="dinamica" (click)="visitTopic(4,9)" [disabled]="!srv.validateTopic(ch4, 8)">
+      <ion-segment-button value="dinamica" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,9)"
+        [disabled]="!srv.validateTopic(ch4, 8)">
         Dinámica
       </ion-segment-button>
     </ion-segment>
@@ -31,12 +35,12 @@
 <ion-content class="fondo">
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'t1-t2'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           XSS
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Esta vulnerabilidad es un fallo en el sistema de validación de HTML incrustado
+          <p style="text-align: center">Esta vulnerabilidad es un fallo en el sistema de validación de HTML incrustado
             y
             consiste en inyectar código HTML y Javascript donde no debería haberlo y así conseguir algún provecho,
             normalmente
@@ -44,64 +48,67 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           XSS-Directa
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Es muy difícil de encontrar una vulnerabilidad de este tipo. Se encuentra en
+          <p style="text-align: center">Es muy difícil de encontrar una vulnerabilidad de este tipo. Se encuentra en
             los
             foros, libros de visita y webs que se puedan modificar por medio de formularios.</p>
           <br />
-          <p style="text-align: justify">Cuando alguien entre a la parte del foro donde se ha inyectado el código, se
+          <p style="text-align: center">Cuando alguien entre a la parte del foro donde se ha inyectado el código, se
             ejecutara
             en su navegador y hará lo que se desee.</p>
           <br />
-          <p>Algunos usan esta vulnerabilidad para hacer un deface usando una etiqueta div> que cubra toda la web o con
+          <p style="text-align: center">Algunos usan esta vulnerabilidad para hacer un deface usando una etiqueta div>
+            que cubra toda la web o con
             un
             script que la redireccione a tu sitio.
           </p>
         </ion-card-content>
         <div class="video-container">
-        <iframe width="340" height="315" src="https://www.youtube.com/embed/EWdvW8mtR-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          <iframe width="340" height="315" src="https://www.youtube.com/embed/EWdvW8mtR-w" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           XSS-Indirecta
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Este tipo de XSS es muy fácil de encontrar en motores de búsqueda.En esta el
+          <p style="text-align: center">Este tipo de XSS es muy fácil de encontrar en motores de búsqueda.En esta el
             código
             se inyecta a través de formularios, URL, cookies, programas en Flash o incluso en vídeos.</p>
           <br />
-          <p>Esta vulnerabilidad es mas difícil sacarle provecho ya que tenemos que conseguir que alguien entre en el
+          <p style="text-align: center">Esta vulnerabilidad es mas difícil sacarle provecho ya que tenemos que conseguir
+            que alguien entre en el
             enlace
             malicioso, mas adelante se vera lo que es un enlace malicioso.</p>
           <br />
         </ion-card-content>
         <div class="video-container">
-        <iframe width="340" height="315" src="https://www.youtube.com/embed/inCS6PQYu34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          <iframe width="340" height="315" src="https://www.youtube.com/embed/inCS6PQYu34" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           RFI
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align:justify">Presiona ver mas para ver la descripcion del metodo RFI.</p>
+          <p style="text-align:center">Presiona ver mas para ver la descripcion del metodo RFI.</p>
           <br />
         </ion-card-content>
         <ion-list>
           <ion-item>
-              <ion-list style="text-align: center">
-                  <button ion-button block outline round icon-end color="primary" (click)=" pop1(4,5)" [disabled]="!srv.validateTopic(ch4, 4)"> Ver RFI
+            <ion-list style="text-align: center">
+              <button ion-button block outline round icon-end color="primary" class="animated slow heartBeat delay-2s"
+                (click)=" pop1(4,5)" [disabled]="!srv.validateTopic(ch4, 4)"> Ver RFI
               </button>
-              </ion-list>
+            </ion-list>
           </ion-item>
         </ion-list>
       </ion-card>
@@ -110,97 +117,97 @@
 
 
     <ion-list *ngSwitchCase="'t3-t4'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Cookie Poisoning
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Una cookie es un fragmento de información que se almacena en el disco duro del
+          <p style="text-align: center">Una cookie es un fragmento de información que se almacena en el disco duro del
             visitante
             de una página web a través de su navegador, a petición del servidor de la página.</p>
           <br />
-          <p style="text-align: justify">Esta información puede ser luego recuperada por el servidor en posteriores
+          <p style="text-align: center">Esta información puede ser luego recuperada por el servidor en posteriores
             visitas
             .</p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Cookie Poisoning
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Aunque las cookies deben ser almacenadas y enviadas de vuelta al servidor sin
+          <p style="text-align: center">Aunque las cookies deben ser almacenadas y enviadas de vuelta al servidor sin
             modificar,
             un atacante podría modificar el valor de las cookies antes de devolverlas.</p>
           <br />
-          <p style="text-align: justify">Si, por ejemplo, una cookie contiene el valor total de la compra de un usuario
+          <p style="text-align: center">Si, por ejemplo, una cookie contiene el valor total de la compra de un usuario
             en
             un sitio web, cambiando ese valor el servidor podría permitir al atacante pagar menos por su compra.</p>
           <br />
-          <p>Este proceso se denomina falsificación de cookies (cookie poisoning).</p>
+          <p style="text-align: center">Este proceso se denomina falsificación de cookies (cookie poisoning).</p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Usos frecuentes de las Cookies
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">A conitnuacion se mensionarán algunos usos más frecuentes de las cookies</p>
+          <p style="text-align: center">A conitnuacion se mensionarán algunos usos más frecuentes de las cookies</p>
           <br />
           <img src="../../../../../../assets/imgs/Usocookies.PNG">
         </ion-card-content>
       </ion-card>
 
 
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Http Spoof
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Sabemos que hay webs que nos muestran las ip de los clientes que se
+          <p style="text-align: center">Sabemos que hay webs que nos muestran las ip de los clientes que se
             conectan....</p>
           <br />
-          <p style="text-align: justify">Pero existen fallos de programación en muchas de ellas que permiten engañar al
+          <p style="text-align: center">Pero existen fallos de programación en muchas de ellas que permiten engañar al
             sistema
             indicando una ip falsa.
           </p>
           <br />
-          <p>Esta técnica se conoce como http spoof.</p>
+          <p style="text-align: center">Esta técnica se conoce como http spoof.</p>
         </ion-card-content>
       </ion-card>
 
     </ion-list>
 
     <ion-list *ngSwitchCase="'t5-t6'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           SQL Injection
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Por inyección SQL entendemos el acto de insertar una serie de sentencias SQL
+          <p style="text-align: center">Por inyección SQL entendemos el acto de insertar una serie de sentencias SQL
             en
             una 'consulta' mediante la manipulación de la entrada de datos de una aplicación, con la que podemos
             conseguir
             validaciones de entrada, extracción y modificación de datos, así como el compromiso total del host.</p>
           <br />
-          <p style="text-align: justify">Cada tipo de base de datos tiene sus propias peculiaridades y métodos de
+          <p style="text-align: center">Cada tipo de base de datos tiene sus propias peculiaridades y métodos de
             inyección,
             dadas las diferencias inherentes de las mismas y del lenguaje en el que se implementan las consultas.</p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Ejemplo de SQL Injection
         </ion-card-title>
         <ion-card-content>
-          <img src="../../../../../../assets/imgs/Sqlinjection1.PNG" />
+          <img class="animated slow zoomIn delay-500ms" src="../../../../../../assets/imgs/Sqlinjection1.PNG" />
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           BSQL Injection
         </ion-card-title>
@@ -219,92 +226,94 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card class="animated slow bounceInRight delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           Ejemplo de BSQL Injection
         </ion-card-title>
         <ion-card-content>
-          <img src="../../../../../../assets/imgs/BSQLinjection.PNG" />
+          <img class="animated slow zoomIn delay-500ms" src="../../../../../../assets/imgs/BSQLinjection.PNG" />
         </ion-card-content>
       </ion-card>
 
     </ion-list>
 
     <ion-list *ngSwitchCase="'dinamica'">
-        <ion-row>
-            <ion-col>
-              <div>
-                <ion-card>
-                  <ion-card-content>
-                    <h1 style="text-align: center; font-weight: bold">Comprueba tu aprendizaje a partir de estos cortos
-                      test</h1>
-                    <br />
-                    <p style="text-align: justify">¿Aprendiste lo necesario sobre esta sección?, entonces realiza estos
-                      test
-                      y corroborra tu aprendizaje.</p>
-                    <br />
-                    <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
-                    <img
-                      style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
-                      src="../../../../../../../assets/imgs/Actividades 1/Actividad 2.jpg">
-                  </ion-card-content>
-    
-                  <br />
-    
-                  <ion-card-content>
-                    <h1 style="text-align: center;font-weight: bold">Instrucciones</h1>
-                    <p style="text-align: center;font-weight: bold">Desliza el nivel que deseas realizar hacia la izquierda
-                      y
-                      empieza tus test.
-                    </p>
-                  </ion-card-content>
-    
-                  <ion-card-content>
-    
-                    <ion-list>
-                      <ion-item-sliding>
-                        <ion-item class="slide1">
-                          <ion-avatar item-start>
-                            <img src="../../../../../../assets/imgs/Dinamica.jpg">
-                          </ion-avatar>
-                          <ion-title>
-                            <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
-                          </ion-title>
-                        </ion-item>
-                        <ion-item-options side="right">
-                          <button ion-button class="slide2" (click)="aDinamica1(4,10)"
-                            [disabled]="!srv.validateTopic(ch4, 9)">
-                            <H3>Concepto 1-a</H3>
-                          </button>
-                        </ion-item-options>
-                      </ion-item-sliding>
-                    </ion-list>
-                    <ion-list>
-                      <ion-item-sliding>
-                        <ion-item class="slide1">
-                          <ion-avatar item-start>
-                            <img src="../../../../../../../assets/imgs/Evaluacion1.jpg">
-                          </ion-avatar>
-                          <ion-title>
-                            <ion-icon name="arrow-round-back" slot="end"> Deslizar</ion-icon>
-                          </ion-title>
-                        </ion-item>
-                        <ion-item-options side="right">
-                          <button ion-button class="slideE" (click)="aEvaluacion(4,11)"
-                            [disabled]="!srv.validateTopic(ch4, 10)">
-                            <H3>Evaluación</H3>
-                          </button>
-                        </ion-item-options>
-    
-                      </ion-item-sliding>
-                    </ion-list>
-    
-                  </ion-card-content>
-                </ion-card>
-              </div>
-            </ion-col>
-          </ion-row>
-     
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-card class="animated slow bounceInRight delay-500ms">
+              <ion-card-content>
+                <h1 style="text-align: center; font-weight: bold">Comprueba tu aprendizaje a partir de estos cortos test
+                </h1>
+                <br />
+
+                <h4 style="text-align: center">¿Aprendiste lo necesario sobre esta sección?, entonces realiza estos test
+                  y corroborra tu aprendizaje.</h4>
+                <br />
+                <!-- Foto de negocios creado por katemangostar - www.freepik.es -->
+                <img class="animated slow zoomIn delay-700ms"
+                  style="width:300px;height:300px;border-radius:150px;margin-left: auto; margin-right: auto; margin-top: auto"
+                  src="../../../../../../../assets/imgs/Actividades 1/Actividad 2.jpg">
+              </ion-card-content>
+
+              <br />
+
+              <ion-card-content>
+                <h1 style="text-align: center;font-weight: bold">Instrucciones</h1>
+                <h4 style="text-align: center;font-weight: bold">Desliza el nivel que deseas realizar hacia la izquierda
+                  y
+                  empieza tus test.
+                </h4>
+              </ion-card-content>
+
+              <ion-card-content>
+
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+                      <ion-avatar item-start>
+                        <img src="../../../../../../assets/imgs/Dinamica.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon class="animated slow infinite bounceInRight delay-1s" name="arrow-round-back"
+                          slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right">
+                      <button ion-button class="slide2" (click)="aDinamica1(4,10)"
+                        [disabled]="!srv.validateTopic(ch4, 9)">
+                        <H3>Concepto 1-a</H3>
+                      </button>
+                    </ion-item-options>
+                  </ion-item-sliding>
+                </ion-list>
+                <ion-list>
+                  <ion-item-sliding>
+                    <ion-item class="slide1">
+                      <ion-avatar item-start>
+                        <img src="../../../../../../../assets/imgs/Evaluacion1.jpg">
+                      </ion-avatar>
+                      <ion-title>
+                        <ion-icon class="animated slow infinite bounceInRight delay-1s" name="arrow-round-back"
+                          slot="end"> Deslizar</ion-icon>
+                      </ion-title>
+                    </ion-item>
+                    <ion-item-options side="right">
+                      <button ion-button class="slideE" (click)="aEvaluacion(4,11)"
+                        [disabled]="!srv.validateTopic(ch4, 10)">
+                        <H3>Evaluación</H3>
+                      </button>
+                    </ion-item-options>
+
+                  </ion-item-sliding>
+                </ion-list>
+
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+
     </ion-list>
   </div>
 </ion-content>

@@ -11,10 +11,10 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="barridos">
+      <ion-segment-button value="barridos" class="animated slow zoomIn delay-500ms">
         Barridos
       </ion-segment-button>
-      <ion-segment-button value="trazados" (click)="visitTopic(2,7)" [disabled]="!srv.validateTopic(ch2, 6)">
+      <ion-segment-button value="trazados" class="animated slow zoomIn delay-500ms" (click)="visitTopic(2,7)" [disabled]="!srv.validateTopic(ch2, 6)">
         Trazados
       </ion-segment-button>
     </ion-segment>
@@ -31,17 +31,17 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <iframe width="340" height="200" src="https://www.youtube.com/embed/dLDWk53sRmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
                 <ion-card-content>
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Barrido de pings
                   </ion-card-title>
-                  <p style="text-align: justify"> El barrido de pings permite determinar los equipos activos en una red,
+                  <p style="text-align: center"> El barrido de pings permite determinar los equipos activos en una red,
                     para ello se emplea el comando:</p>
                   <br/>
-                  <p style="text-align: justify;font-weight: bold">nmap sP + 'Dirección de red' </p>
+                  <p style="text-align: center;font-weight: bold">nmap sP + 'Dirección de red' </p>
                 </ion-card-content>
               </ion-card>
             </div>
@@ -55,14 +55,14 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <iframe width="340" height="200" src="https://www.youtube.com/embed/YnaKOhmRVmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
                 <ion-card-content>
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Trazado de rutas
                   </ion-card-title>
-                  <p style="text-align: justify"> El trazado de rutas permite determinar el camino que hay entre un origen
+                  <p style="text-align: center"> El trazado de rutas permite determinar el camino que hay entre un origen
                     y un destino.</p>
                 </ion-card-content>
               </ion-card>

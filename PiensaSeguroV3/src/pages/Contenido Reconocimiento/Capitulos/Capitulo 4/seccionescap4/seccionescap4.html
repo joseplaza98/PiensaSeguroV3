@@ -11,10 +11,12 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="intro1" [disabled]="!srv.validateTopic(ch3, 15)">
+      <ion-segment-button value="intro1" class="animated slow zoomIn delay-500ms"
+        [disabled]="!srv.validateTopic(ch3, 15)">
         Intro
       </ion-segment-button>
-      <ion-segment-button value="vulnerabilidad" (click)="visitTopic(4,1)" [disabled]="!srv.validateTopic(ch3, 15)">
+      <ion-segment-button value="vulnerabilidad" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,1)"
+        [disabled]="!srv.validateTopic(ch3, 15)">
         vulnerable
       </ion-segment-button>
     </ion-segment>
@@ -29,7 +31,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class=" video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/XBUHhlbpimo" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -39,7 +41,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Introducción
                   </ion-card-title>
-                  <p style="text-align: justify">En este capítulo veremos hasta que punto y de que formas pueden
+                  <p style="text-align: center">En este capítulo veremos hasta que punto y de que formas pueden
                     obtenerse,
                     cambiarse o incluso como hacer desaparecer contenidos web y datos sensibles de empresas o
                     estamentos
@@ -57,7 +59,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class=" video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/9hJ4fgfePfg" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -67,7 +69,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Vulnerabilidad
                   </ion-card-title>
-                  <p style="text-align: justify">Se tratarán diversos vectores de ataque conocidos como por ejemplo el
+                  <p style="text-align: center">Se tratarán diversos vectores de ataque conocidos como por ejemplo el
                     XSS
                     (Cross Site Scripting), RFI (Remote File Includer), Autentificación web (mediante scripts o
                     bypass),
@@ -83,7 +85,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInRight delay-500ms">
                 <div class=" video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/i3CTOvutACc" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -93,11 +95,13 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     ¿Que es una vulnerabilidad?
                   </ion-card-title>
-                   <ion-list style="text-align: center">
-                    <button ion-button block outline round icon-end color="primary" (click)="pop1(4,2)" [disabled]="!srv.validateTopic(ch4, 1)">Acceso y validaciones</button>
-                </ion-list>
+                  <ion-list style="text-align: center">
+                    <button ion-button block outline round icon-end color="primary"
+                      class="animated slow heartBeat delay-2s" (click)="pop1(4,2)"
+                      [disabled]="!srv.validateTopic(ch4, 1)">Acceso y validaciones</button>
+                  </ion-list>
                 </ion-card-content>
-               
+
               </ion-card>
             </div>
           </ion-col>
@@ -106,7 +110,7 @@
     </ion-list>
   </div>
 
-  <ion-fab left bottom>
+  <ion-fab left bottom class="animated slow zoomIn delay-500ms">
     <button ion-fab color="secundary">
       <ion-icon name="arrow-dropright"></ion-icon>
     </button>

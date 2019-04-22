@@ -12,10 +12,10 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="basedatos">
+      <ion-segment-button value="basedatos" class="animated slow zoomIn delay-500ms">
         Base Datos
       </ion-segment-button>
-      <ion-segment-button value="consultas" (click)="visitTopic(2,5)" [disabled]="!srv.validateTopic(ch2, 4)">
+      <ion-segment-button value="consultas" class="animated slow zoomIn delay-500ms" (click)="visitTopic(2,5)" [disabled]="!srv.validateTopic(ch2, 4)">
         Consultas
       </ion-segment-button>
     </ion-segment>
@@ -32,7 +32,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <ion-card-content>
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Base de datos WHOIS
@@ -40,7 +40,7 @@
                   <p style="text-align: justify"> - El servicio de WHOIS es un directorio gratuito y de acceso público que
                     contiene información técnica y de contacto de los titulares de nombres de dominio registrados (los “registratarios”).</p>
                   <br/>
-                  <img src="../../../../../../assets/imgs/whois.gif" />
+                  <img class="animated slow zoomIn delay-1s" src="../../../../../../assets/imgs/whois.gif" />
                   <br/>
                   <p style="text-align: justify"> - Toda persona que desee saber quién está detrás del nombre de dominio
                     de un sitio web puede solicitar esa información mediante WHOIS.</p>
@@ -58,7 +58,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <ion-card-content>
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Consultas DNS inversas
@@ -67,7 +67,7 @@
                     de internet ya que sin ellas no sería posible poner en el navegador una dirección web y obtener la página.
                   </p>
                   <br/>
-                  <img src="../../../../../../assets/imgs/consultainversa.gif" />
+                  <img class="animated slow zoomIn delay-500ms" src="../../../../../../assets/imgs/consultainversa.gif" />
                   <br/>
                   <p style="text-align: justify"> - Las consultas inversas no son necesarias pero si son muy peligrosas ya
                     que si un atacante conoce todos los dominios que tiene su servidor es lógico que intente entrar por el

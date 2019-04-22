@@ -16,11 +16,11 @@
 
 <ion-content #content padding id="content">
   <ion-card *ngFor="let message of messages" class="animated slow bounceInLeft delay-500ms">
-    <ion-card-content class="animated slow bounceInRight delay-500ms">
-    <ion-card-header>
+    
+    <ion-card-header class="animated slow bounceInRight delay-500ms">
       {{message.nombre}} dice:
     </ion-card-header>
-  </ion-card-content>
+  
     <ion-card-content class="animated slow bounceInLeft delay-500ms">
       {{message.mensaje}}
     </ion-card-content>

@@ -11,10 +11,12 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="acceso" [disabled]="!srv.validateTopic(ch4, 2)">
+      <ion-segment-button value="acceso" class="animated slow zoomIn delay-500ms"
+        [disabled]="!srv.validateTopic(ch4, 2)">
         Acceso
       </ion-segment-button>
-      <ion-segment-button value="validaciones" (click)="visitTopic(4,3)" [disabled]="!srv.validateTopic(ch4, 2)">
+      <ion-segment-button value="validaciones" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,3)"
+        [disabled]="!srv.validateTopic(ch4, 2)">
         Validaciones
       </ion-segment-button>
     </ion-segment>
@@ -30,7 +32,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/RglGqlVzYDQ" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -40,7 +42,7 @@
                   By Pass
                 </ion-card-title>
                 <ion-card-content>
-                  <p style="text-align: justify">Esta vulnerabilidad nos permite acceder a áreas restringidas a
+                  <p style="text-align: center">Esta vulnerabilidad nos permite acceder a áreas restringidas a
                     usuarios,
                     “protegidas” por user y pass sin que sea necesario introducir un pass.</p>
                 </ion-card-content>
@@ -54,7 +56,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInRight delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/csLeyuyFf_g" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -75,7 +77,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/7j8o3Mff6V0" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -85,7 +87,7 @@
                   <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
                     Validaciones
                   </ion-card-title>
-                  <p style="text-align: justify">Vamos a ver diferentes formas de saltar scripts de validacion java,
+                  <p style="text-align: center">Vamos a ver diferentes formas de saltar scripts de validacion java,
                     php,
                     etc....
                   </p>
@@ -100,7 +102,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInRight delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/7j8o3Mff6V0" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -111,7 +113,8 @@
                     ¿Porque proteger la información?
                   </ion-card-title>
                   <ion-list style="text-align: center">
-                    <button ion-button block outline round icon-end color="primary" (click)="pop1(4,4)"
+                    <button ion-button block outline round icon-end color="primary"
+                      class="animated slow heartBeat delay-2s" (click)="pop1(4,4)"
                       [disabled]="!srv.validateTopic(ch4, 3)">Ver</button>
                   </ion-list>
                 </ion-card-content>

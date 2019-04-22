@@ -40,7 +40,11 @@ export class SelecTematicaPage {
     console.log('ionViewDidLoad SelecTematicaPage');
   }
 
-  introReco() {
+  aRetosReco() {
+    this.navCtrl.push(RetosRecoPage);
+  }
+
+  aIntroReco(){
     this.navCtrl.push(IntroRecoPage);
   }
 

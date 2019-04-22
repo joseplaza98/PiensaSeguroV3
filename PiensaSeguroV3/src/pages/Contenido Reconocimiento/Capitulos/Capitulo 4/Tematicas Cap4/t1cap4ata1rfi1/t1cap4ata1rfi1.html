@@ -11,10 +11,11 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="rfi" [disabled]="!srv.validateTopic(ch4, 5)">
+      <ion-segment-button value="rfi" class="animated slow zoomIn delay-500ms" [disabled]="!srv.validateTopic(ch4, 5)">
         RFI
       </ion-segment-button>
-      <ion-segment-button value="ataque" (click)="visitTopic(4,6)" [disabled]="!srv.validateTopic(ch4, 5)">
+      <ion-segment-button value="ataque" class="animated slow zoomIn delay-500ms" (click)="visitTopic(4,6)"
+        [disabled]="!srv.validateTopic(ch4, 5)">
         Ataque
       </ion-segment-button>
     </ion-segment>
@@ -25,21 +26,21 @@
 <ion-content class="fondo">
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'rfi'">
-      <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
         <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
           RFI
         </ion-card-title>
         <ion-card-content>
-          <p style="text-align: justify">Esta vulnerabilidad se basa en incluir archivos remotos en documentos hechos
+          <p style="text-align: center">Esta vulnerabilidad se basa en incluir archivos remotos en documentos hechos
             exclusivamente
             en php.</p>
           <br />
-          <p style="text-align: justify">La función "include();" de php permite incluir archivos dentro del mismo
+          <p style="text-align: center">La función "include();" de php permite incluir archivos dentro del mismo
             documento
             como si fuesen parte del texto, esta función se puede usar de dos formas que veremos a continuación.
           </p>
           <br />
-          <p style="text-align: justify">DATO IMPORTANTE: Este tipo de vulnerabilidad compromete a TODO EL SERVIDOR</p>
+          <p style="text-align: center">DATO IMPORTANTE: Este tipo de vulnerabilidad compromete a TODO EL SERVIDOR</p>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -49,7 +50,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="315" src="https://www.youtube.com/embed/zL1cjk_nX90" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -59,12 +60,12 @@
                   <ion-card-title style="text-align: center; font-weight: bold">
                     Ataque con RFI
                   </ion-card-title>
-                  <p style="text-align: justify">A continuacion se describiran los pasos necesarios para realizar un
+                  <p style="text-align: center">A continuacion se describiran los pasos necesarios para realizar un
                     ataque de tipo
                     RFI y LFI mediante Kali Linux.</p>
                 </ion-card-content>
               </ion-card>
-              </div>
+            </div>
           </ion-col>
         </ion-row>
       </ion-grid>

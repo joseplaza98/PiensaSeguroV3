@@ -12,10 +12,10 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="CartaBlanca">
+      <ion-segment-button value="CartaBlanca" class="animated slow zoomIn delay-500ms" >
         C-Blanca
       </ion-segment-button>
-      <ion-segment-button value="Confidencialidad" (click)="visitTopic(2,2)" [disabled]="!srv.validateTopic(ch2, 1)">
+      <ion-segment-button value="Confidencialidad" class="animated slow zoomIn delay-500ms"  (click)="visitTopic(2,2)" [disabled]="!srv.validateTopic(ch2, 1)">
         Confidencialidad
       </ion-segment-button>
     </ion-segment>
@@ -33,7 +33,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/eL856PwMmz4" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -57,7 +57,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInRight delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/EHjmxujXIaQ" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -83,7 +83,7 @@
         <ion-row>
           <ion-col>
             <div>
-              <ion-card>
+              <ion-card class="animated slow bounceInLeft delay-500ms">
                 <div class="video-container">
                   <iframe width="340" height="200" src="https://www.youtube.com/embed/-WsO5BLAxSI" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

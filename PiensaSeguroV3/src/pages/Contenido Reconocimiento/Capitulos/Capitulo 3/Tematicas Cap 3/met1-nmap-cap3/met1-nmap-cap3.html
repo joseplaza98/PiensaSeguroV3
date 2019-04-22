@@ -11,13 +11,16 @@
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="intro">
-      <ion-segment-button value="definicion" [disabled]="!srv.validateTopic(ch3, 7)">
+      <ion-segment-button value="definicion" class="animated slow zoomIn delay-500ms"
+        [disabled]="!srv.validateTopic(ch3, 7)">
         Definición
       </ion-segment-button>
-      <ion-segment-button value="comandos" (click)="cargar(3,8)" [disabled]="!srv.validateTopic(ch3, 7)" >
+      <ion-segment-button value="comandos" class="animated slow zoomIn delay-500ms" (click)="cargar(3,8)"
+        [disabled]="!srv.validateTopic(ch3, 7)">
         Algunos Comandos
       </ion-segment-button>
-      <ion-segment-button value="practica" (click)="cargar2(3,9)" [disabled]="!srv.validateTopic(ch3, 8)">
+      <ion-segment-button value="practica" class="animated slow zoomIn delay-500ms" (click)="cargar2(3,9)"
+        [disabled]="!srv.validateTopic(ch3, 8)">
         Práctica
       </ion-segment-button>
     </ion-segment>
@@ -29,69 +32,52 @@
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'definicion'">
 
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div>
-              <ion-card>
-                <div class="video-container">
-                  <iframe width="340" height="200" src="https://www.youtube.com/embed/19zRixuBAP4" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                </div>
-                <ion-card-content>
-                  <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
-                    Definición de Nmap
-                  </ion-card-title>
-                  <p style="text-align: justify"> Nmap es un programa de código abierto que sirve para efectuar rastreo
-                    de
-                    puertos escrito originalmente por Gordon Lyon y cuyo desarrollo se encuentra hoy a cargo de una
-                    comunidad.
-                    Fue creado originalmente para Linux aunque actualmente es multiplataforma.</p>
-                </ion-card-content>
-              </ion-card>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
+        <div class="video-container">
+          <iframe width="340" height="200" src="https://www.youtube.com/embed/19zRixuBAP4" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <ion-card-content>
+          <ion-card-title style="color:#000000;text-align:center;font-weight: bold;">
+            Definición de Nmap
+          </ion-card-title>
+          <p style="text-align: center"> Nmap es un programa de código abierto que sirve para efectuar rastreo
+            de
+            puertos escrito originalmente por Gordon Lyon y cuyo desarrollo se encuentra hoy a cargo de una
+            comunidad.
+            Fue creado originalmente para Linux aunque actualmente es multiplataforma.</p>
+        </ion-card-content>
+      </ion-card>
+
     </ion-list>
 
     <ion-list *ngSwitchCase="'comandos'">
 
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div>
-              <ion-card>
+      <ion-card class="animated slow bounceInLeft delay-500ms">
 
-                <ion-card-content>
-                  <ion-card-title style="text-align: center;font-weight: bold">20 Comandos escenciales con Nmap
-                  </ion-card-title>
-                  <p style="text-align: justify">A continuación encontrará 20 comantos escenciales usando Nmap para que
-                    use
-                    en sus proximas prácticas de rastreo e interceptacipón de información</p>
-                </ion-card-content>
-                <div class="video-container">
-                  <iframe src="https://h5p.org/h5p/embed/453451" width="330" height="550" frameborder="0"
-                    allowfullscreen="allowfullscreen"></iframe>
-                  <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js"
-                    charset="UTF-8"></script>
-                </div>
-              </ion-card>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+        <ion-card-content>
+          <ion-card-title style="text-align: center;font-weight: bold">20 Comandos escenciales con Nmap
+          </ion-card-title>
+          <p style="text-align: center">A continuación encontrará 20 comantos escenciales usando Nmap para que
+            use
+            en sus proximas prácticas de rastreo e interceptacipón de información</p>
+        </ion-card-content>
+        <div class="video-container">
+          <iframe src="https://h5p.org/h5p/embed/453451" width="330" height="550" frameborder="0"
+            allowfullscreen="allowfullscreen"></iframe>
+          <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+        </div>
+      </ion-card>
+
     </ion-list>
 
     <ion-list *ngSwitchCase="'practica'">
-        <div id="Iframe-Liason-Sheet" class="iframe-border center-block-horiz">
-            <div class="responsive-wrapper responsive-wrapper-wxh-760x1200">
-              <iframe src="https://docs.google.com/document/d/1MEWIc6yZYfhmOUoJ5EbAJlFiBchRX8MYJfYDvA-ThLE/edit?usp=sharing">Cargando...</iframe>
-            </div>
-          </div>
+      <div id="Iframe-Liason-Sheet" class="iframe-border center-block-horiz">
+        <div class="responsive-wrapper responsive-wrapper-wxh-760x1200">
+          <iframe
+            src="https://docs.google.com/document/d/1MEWIc6yZYfhmOUoJ5EbAJlFiBchRX8MYJfYDvA-ThLE/edit?usp=sharing">Cargando...</iframe>
+        </div>
+      </div>
     </ion-list>
   </div>
 </ion-content>
-
-

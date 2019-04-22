@@ -9,16 +9,16 @@
     <ion-title>Chat Interactivo 4</ion-title>
   </ion-navbar>
   <ion-toolbar no-border-top>
-      <ion-input placeholder="¿Quién eres?" [(ngModel)]="userName"></ion-input>
+      <ion-input class="animated slow bounceInRight delay-500ms" placeholder="¿Quién eres?" [(ngModel)]="userName"></ion-input>
     </ion-toolbar>
 </ion-header>
 
 <ion-content #content padding id="content">
   <ion-card *ngFor="let message of messages">
-    <ion-card-header>
+    <ion-card-header class="animated slow bounceInLeft delay-500ms">
       {{message.nombre}} dice:
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content class="animated slow bounceInRight delay-500ms">
       {{message.mensaje}}
     </ion-card-content>
   </ion-card>
@@ -27,9 +27,9 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-input placeholder="Responder" [(ngModel)]="message"></ion-input>
+    <ion-input class="animated slow zoomIn delay-500ms" placeholder="Responder" [(ngModel)]="message"></ion-input>
     <ion-buttons end>
-      <button ion-button icon-right (click)="sendMessage()">
+      <button ion-button icon-right class="animated slow zoomIn delay-500ms" (click)="sendMessage()">
           Enviar
         <ion-icon name="send"></ion-icon>
       </button>
